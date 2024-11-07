@@ -6,7 +6,7 @@
 
 body {
     font-family: 'Arial', sans-serif;
-    background-color: #f4f4f9;
+    background-color: #e9f2fb;
     color: #333;
     display: flex;
     justify-content: center;
@@ -17,7 +17,7 @@ body {
 }
 
 h1 {
-    color: #007BFF;
+    color: #0066cc;
     margin-bottom: 20px;
 }
 
@@ -41,27 +41,37 @@ select, button {
     width: 100%;
     padding: 10px;
     margin-top: 10px;
-    border: 2px solid #007BFF;
+    border: 2px solid #0066cc;
     border-radius: 4px;
     font-size: 16px;
     color: #333;
-    background-color: #fff;
+    background-color: #ffffff;
     cursor: pointer;
     transition: all 0.3s ease;
 }
 
-/* Hover effects for buttons */
 button:hover {
-    background-color: #007BFF;
+    background-color: #0066cc;
     color: white;
-    border-color: #0056b3;
+    border-color: #005bb5; /
 }
 
 select:hover {
-    border-color: #0056b3;
+    border-color: #005bb5;
 }
 
-/* Style for paragraphs (targets) */
+
+button#loadFile {
+    background-color: #4e8df2;
+    border-color: #3178c6;
+    color: white;
+}
+
+button#loadFile:hover {
+    background-color: #3178c6;
+    border-color: #1e63a2;
+}
+
 p {
     margin-top: 20px;
     font-size: 18px;
@@ -83,6 +93,7 @@ p {
         width: 90%;
     }
 }
+
 ul {
     display: flex;
     flex-wrap: wrap;
