@@ -2,10 +2,66 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>JavaScript testing</title>
-    <script src="10.js" defer></script>
+    <title>Moduuli 1 (JS)</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
+    <h1>Choose a JavaScript Task</h1>
+    
+    <div id="option">
+        <label for="fileSelect">Choose a JavaScript file:</label>
+        <select id="fileSelect">
+            <option value="1.js">Task 1</option>
+            <option value="2.js">Task 2</option>
+            <option value="3.js">Task 3</option>
+            <option value="4.js">Task 4</option>
+            <option value="5.js">Task 5</option>
+            <option value="6.js">Task 6</option>
+            <option value="7.js">Task 7</option>
+            <option value="8.js">Task 8</option>
+            <option value="9.js">Task 9</option>
+            <option value="10.js">Task 10</option>
+        </select>
+
+        <button onclick="loadFile()">Load File</button>
+    </div>
+
+    <script>
+        window.onload = function() {
+            const savedSelection = localStorage.getItem('selectedFile');
+            if (savedSelection) {
+                document.getElementById('fileSelect').value = savedSelection;
+                loadScript(savedSelection);
+            }
+        }
+
+        function loadFile() {
+            const selectedFile = document.getElementById('fileSelect').value;
+            console.log('User selected:', selectedFile);
+
+            localStorage.setItem('selectedFile', selectedFile);
+
+            location.reload();
+        }
+
+        function loadScript(scriptPath) {
+            console.log('Attempting to load script from:', scriptPath);
+
+            const script = document.createElement('script');
+            script.src = scriptPath;
+
+            script.onload = function() {
+                console.log(scriptPath + ' successfully loaded!');
+            };
+
+            script.onerror = function() {
+                console.error('Failed to load the script:', scriptPath);
+            };
+
+            document.head.appendChild(script);
+        }
+    </script>
+
     <p id="target1"></p>
     <p id="target2"></p>
     <p id="target3"></p>

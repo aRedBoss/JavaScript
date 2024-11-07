@@ -1,0 +1,98 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f4f4f9;
+    color: #333;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    flex-direction: column;
+    text-align: center;
+}
+
+h1 {
+    color: #007BFF;
+    margin-bottom: 20px;
+}
+
+#option {
+    background-color: #ffffff;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    width: 300px;
+    margin-bottom: 20px;
+}
+
+label {
+    display: block;
+    font-size: 16px;
+    margin-bottom: 10px;
+    color: #444;
+}
+
+select, button {
+    width: 100%;
+    padding: 10px;
+    margin-top: 10px;
+    border: 2px solid #007BFF;
+    border-radius: 4px;
+    font-size: 16px;
+    color: #333;
+    background-color: #fff;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+/* Hover effects for buttons */
+button:hover {
+    background-color: #007BFF;
+    color: white;
+    border-color: #0056b3;
+}
+
+select:hover {
+    border-color: #0056b3;
+}
+
+/* Style for paragraphs (targets) */
+p {
+    margin-top: 20px;
+    font-size: 18px;
+    color: #555;
+}
+
+#target {
+    width: 100%;
+    padding: 15px;
+    margin-top: 20px;
+    border: 2px solid #e2e2e2;
+    border-radius: 5px;
+    background-color: #ffffff;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+}
+
+@media (max-width: 480px) {
+    #option {
+        width: 90%;
+    }
+}
+ul {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    padding: 0;
+    list-style-type: none;
+}
+
+li {
+    flex: 1 0 5.5%;
+    margin: 5px;
+    text-align: center;
+}
